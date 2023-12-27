@@ -1,6 +1,5 @@
 # MTA Bus Tracker
 #### Video Demo:  <https://youtu.be/pvRycR_9utY>
-#### Description:
 
 ## Introduction
 
