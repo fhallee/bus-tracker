@@ -1,0 +1,11 @@
+name: Import API_KEY
+on: [push]  # Trigger the workflow on pushes to any branch
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Specify the virtual environment
+    env:  # Set at the job level, making API_KEY accessible to all steps
+      API_KEY: ${{ secrets.API_KEY }}
+    steps:
+      - uses: actions/checkout@v3  # Checkout the repository's code
+      - name: Set API_KEY environment variable securely (optional)
+        run: echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV  # Could be removed for clarity
